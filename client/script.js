@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -> bot's response
-  const url = 'https://open-ai-chat-app.onrender.com/';
+  const url = 'https://open-ai-backend.herokuapp.com/';
   const response = await fetch(url, {
     method: 'POST',
     headers: {
