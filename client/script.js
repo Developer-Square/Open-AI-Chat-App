@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from server -> bot's response
-  const url = 'https://imagegenerator.techive.co.ke/server';
+  const url = 'https://chat.techive.co.ke/server';
   const response = await fetch(url, {
     method: 'POST',
     headers: {
