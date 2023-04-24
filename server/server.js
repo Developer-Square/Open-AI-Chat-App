@@ -12,7 +12,12 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: 'https://chat.techive.co.ke',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get('/', async (req, res) => {
