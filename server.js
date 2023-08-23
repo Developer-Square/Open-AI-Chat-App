@@ -14,7 +14,11 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
+
+// enable cors
 app.use(cors());
+app.options('*', cors());
+
 app.use(express.json());
 
 app.get('/', async (req, res) => {
@@ -42,4 +46,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log(`Server is running on port ${port}`));
