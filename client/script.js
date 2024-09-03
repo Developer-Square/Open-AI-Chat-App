@@ -71,7 +71,7 @@ const handleSubmit = async (e) => {
   // fetch data from server -> bot's response
   const url = 'https://open-ai-chat-app.onrender.com';
   // const url = 'https://chat.techive.co.ke/server';
-  // const url = 'http://localhost:5000/';
+  // const url = 'http://localhost:8000/';
   const response = await fetch(url, {
     method: 'POST',
     headers: {
